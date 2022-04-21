@@ -1,0 +1,115 @@
+$--primary--background-color : #ffc0B9;
+$--primary--text-color: #fffFC5;
+
+
+.dashboard {
+  padding: 16px 16px 14px;
+  background-color: $--primary--background-color;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 480px;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 4px;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+  h4 {
+    color: $--primary--text-color;
+    font-size: 12px;
+  }
+    
+  h2 {
+    color: #333 ;
+    font-size: 20px;
+  }
+}
+
+
+
+/* CD */
+.cd {
+  display: flex;
+  margin: auto;
+  width: 200px;
+}
+
+.cdThumb {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+    margin: auto;
+    
+  }
+  .cdThumb.active {
+    animation: circle linear  infinite 10s;
+  }
+
+  @keyframes circle {
+    from{
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* CONTROL */
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .btn {
+    padding: 18px;
+    font-size: 18px;
+  }
+  .btn.active {
+    color: $--primary--text-color;
+  }
+  .btn-toggle-play {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $--primary--text-color;
+  }
+  .btnDisappear {
+    display: none;
+  }
+}
+
+
+
+
+
+
+.progress {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 6px;
+  background-color: rgb(24, 26, 23);
+  cursor: pointer;
+}
